@@ -1,3 +1,3 @@
 <template>
-  <div></div>
+  <div>影院</div>
 </template>
