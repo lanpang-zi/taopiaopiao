@@ -11,12 +11,12 @@
      <div class="menu">
        <div class="menu-nav">
         <ul>
-          <router-link to="">
+          <router-link to="/ticket">
             <van-icon name="hot" color="#f6242e" />
             <span>电影票</span>
           </router-link>
 
-          <router-link to="">
+          <router-link to="/coupon">
            <van-icon name="vip-card" color="#f68724"/>
             <span>优惠劵</span>
           </router-link>
@@ -26,7 +26,7 @@
 
       <div class="menu-list">
         <div class="menu-item">
-          <router-link to="/films">
+          <router-link to="/card">
             <span class="menu-movice">淘票票乐影卡</span>
             <span class="menu-span">></span>
           </router-link>
@@ -36,7 +36,7 @@
 
       <div class="menu-list2">
         <div class="menu-item2">
-          <router-link to="/films">
+          <router-link to="/help">
             <span class="menu-movice">帮助与反馈</span>
             <span class="menu-span">淘票小蜜 ></span>
           </router-link>
@@ -91,7 +91,7 @@ export default {
 
    .menu{
      height:260px;
-     background:#ccc;
+     background:#fff;
 
      .menu-nav{
        height:126px;
@@ -123,11 +123,7 @@ export default {
               display: block;
               font-size:14px;
             }
-
-            
-           
-          
-            
+  
           }
        }
      }
@@ -166,9 +162,8 @@ export default {
          .menu-span{
             float:right;
             opacity:0.3
-          }
-          
-          
+
+          }  
         }
      }
 
@@ -206,9 +201,7 @@ export default {
          .menu-span{
             float:right;
             opacity:0.3
-          }
-          
-          
+          } 
         }
      }
      
