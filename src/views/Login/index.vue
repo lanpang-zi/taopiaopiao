@@ -94,7 +94,9 @@ export default {
         if(response.data.length>0){
              var userInfo ={
                username:`${obj.username}`,
-               password:`${obj.password}`
+               password:`${obj.password}`,
+               avatar:`${response.data[0].avatar}`,
+               nickname:`${response.data[0].nickname}`
              }
             window.localStorage.setItem("userInfo", JSON.stringify(userInfo));
             this.$router.replace('/center')

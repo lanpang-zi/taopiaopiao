@@ -3,9 +3,10 @@
     {
       "username": "admin",
       "password": "123",
+      "avatar": "img04.jpg",
+      "nickname": "因为一句我爱你",
       "id": 1
     },
-   
     {
       "username": "admin2",
       "password": "123",
@@ -14,7 +15,33 @@
     {
       "username": "admin6",
       "password": "123",
-      "id": 7
+      "avatar": "4.png",
+      "id": 8
+    },
+    {
+      "username": "admin7",
+      "password": "123",
+      "avatar": "4.jpg",
+      "id": 9
+    },
+    {
+      "username": "admin8",
+      "password": "1234",
+      "avatar": "img05.jpg",
+      "id": 10
+    },
+    {
+      "username": "aaa",
+      "password": "123",
+      "avatar": "4.png",
+      "id": 11
+    },
+    {
+      "username": "bbb",
+      "password": "123",
+      "avatar": "img05.jpg",
+      "nickname": "一条狗的使命",
+      "id": 12
     }
   ],
   "todos": [

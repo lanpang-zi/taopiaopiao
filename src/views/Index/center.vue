@@ -2,8 +2,8 @@
   <div class="person">
     
      <div class="header">
-       <div class="avatar"></div>
-       <p>因为一句我爱你</p>
+       <div class="avatar" :style="back"></div>
+       <p>{{ userInfo.nickname }}</p>
          
      </div>
 
@@ -54,6 +54,31 @@
 
 <script>
 export default {
+  data (){
+    let userInfo = localStorage.getItem('userInfo')
+    userInfo=JSON.parse(userInfo)
+    let a=userInfo.avatar
+    console.log(userInfo)
+    console.log(userInfo.avatar);
+    console.log(a);
+    let img = require(`../../assets/${userInfo.avatar}`);
+    console.log(img);
+    var cc=`"url("+ require("../../assets/${userInfo.avatar}")+")"`
+    console.log(cc);
+    return{
+      back:{
+        backgroundImage:"url("+ img +")",
+       // backgroundImage:`"url("+ require("../../assets/${userInfo.avatar}")+")"`,
+        backgroundRepeat:"no-repeat",
+        backgroundSize:"100% 100%"
+      },
+      userInfo: {
+        nickname: userInfo.nickname
+      }
+    }
+  }
+
+  
   
 }
 </script>

@@ -10,6 +10,7 @@ import Ticket from '../views/Center/cinema-ticket.vue'
 import Coupon from '../views/Center/coupon.vue'
 import Card from '../views/Center/card.vue'
 import Help from '../views/Center/help.vue'
+import Redeem from '../views/Center/redeem.vue'
 
 
 Vue.use(Router)
@@ -78,6 +79,13 @@ var router =new Router({
       component:Help,
       meta: {
         requrireLogin:true
+      }
+    },
+    {
+      path:'/redeem',
+      component:Redeem,
+      meta:{
+        requireLogin:true
       }
     }
 
