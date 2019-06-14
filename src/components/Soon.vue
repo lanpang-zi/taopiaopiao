@@ -3,8 +3,13 @@
     <router-link class="film-item"
     v-for="film in list"
     :key="film.filmId"
-    to="/detail"
     tag="li"
+    :to="{
+      name: 'detail',
+      params: {
+        filmId: film.filmId
+      }
+    }"
     >
     <img class="film-img" :src="film.poster" alt="">
     <div class="film-info">

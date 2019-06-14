@@ -1,6 +1,6 @@
 // 影片数据仓库
 import axios from 'axios'
-import { Toast } from 'vant'
+// import { Toast } from 'vant'
 
 export default {
   namespaced: true,
@@ -46,10 +46,10 @@ export default {
      */
     getFilmList ({ commit, state }, isLoadMore) {
       // 请求之前 loading
-      Toast.loading({
-        duration: 0,
-        message: '加载中...'
-      })
+      // Toast.loading({
+      //   duration: 0,
+      //   message: '加载中...'
+      // })
       commit('SETLOADING', true) // 请求中
       setTimeout(() => {
         axios.get('https://m.maizuo.com/gateway', {
@@ -79,7 +79,7 @@ export default {
           commit('ADDPAGENUM') // 请求完成设置pagenum ++
           commit('SETLOADING', false) // 请求完成
           // 请求成功，关闭 loading
-          Toast.clear()
+          // Toast.clear()
         })
       }, 2000)
     },
