@@ -1,7 +1,8 @@
 <template>
    <div>
+     <!-- <keep-alive include="film"> -->
      <router-view></router-view>
-       
+
 
      <van-tabbar v-model="active" >
      <van-tabbar-item icon="hot" to="/films">热映</van-tabbar-item>
@@ -47,5 +48,3 @@ export default {
   
 }
 </script>
-
-

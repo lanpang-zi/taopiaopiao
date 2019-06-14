@@ -54,6 +54,11 @@ var router =new Router({
       component:Login
     },
     {
+      path: '/detail/:filmId',
+      name: 'detail',
+      component: () => import('../views/Detail/index.vue')
+    },
+    {
       path:'/ticket',
       component:Ticket,
       meta: {
@@ -93,7 +98,6 @@ var router =new Router({
 
   ]
 })
-
 
 router.beforeEach((to,from,next)=>{
   if(to.meta.requrireLogin){
