@@ -6,10 +6,16 @@ import Login from '../views/Login/index.vue'
 import Film from '../views/Index/film.vue'
 import Cinema from  '../views/Index/cinema.vue'
 import Center from '../views/Index/center.vue'
+import Ticket from '../views/Center/cinema-ticket.vue'
+import Coupon from '../views/Center/coupon.vue'
+import Card from '../views/Center/card.vue'
+import Help from '../views/Center/help.vue'
+import Redeem from '../views/Center/redeem.vue'
+
 
 Vue.use(Router)
 
-export default new Router({
+var router =new Router({
   routes:[
     {
       path:'/',
@@ -28,7 +34,10 @@ export default new Router({
         {
           path:'center',
           name:'center',
-          component:Center
+          component:Center,
+          meta: {
+            requireLogin: true
+          }
         },
         {
           path:'',
@@ -48,8 +57,67 @@ export default new Router({
       path: '/detail/:filmId',
       name: 'detail',
       component: () => import('../views/Detail/index.vue')
+    },
+    {
+      path:'/ticket',
+      component:Ticket,
+      meta: {
+        requrireLogin:true
+      }
+    },
+    {
+      path:'/coupon',
+      component:Coupon,
+      meta: {
+        requrireLogin:true
+      }
+    },
+    {
+      path:'/card',
+      component:Card,
+      meta: {
+        requrireLogin:true
+      }
+    },
+    {
+      path:'/help',
+      component:Help,
+      meta: {
+        requrireLogin:true
+      }
+    },
+    {
+      path:'/redeem',
+      component:Redeem,
+      meta:{
+        requireLogin:true
+      }
     }
+
    
 
   ]
 })
+
+router.beforeEach((to,from,next)=>{
+  if(to.meta.requrireLogin){
+
+    if(window.localStorage.getItem('userInfo')){
+      next();
+    }else{
+      next({
+        path:'/path',
+        query:{
+          redirect:to.fullPath
+        }
+      })
+    }
+
+  }else{
+    next();
+  }
+
+})
+
+export default router
+
