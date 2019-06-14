@@ -1,13 +1,26 @@
 <template>
-  <div class="card">
-    <router-view></router-view>
-    <div class="footer">
-      <div class="company"></div>
-      <div class="info">
-        绑定淘票票乐影卡，即同意
-        <router-link to="" class="info-f">《淘票票乐影卡章程》</router-link>
-      </div>
+  <div>
+    <div class="header">
+      <div class="card-info">
+        <img src="//gw.alicdn.com/tfs/TB1kuxwmxTpK1RjSZFKXXa2wXXa-330-210.png" alt="">
+        <span class="money">余额(元)</span>
+        <span class="amount">0.00</span>
+        <router-link class="tied-card" to="/card/bank">立即绑卡</router-link>
 
+      </div>
+      <div class="card-list">
+        <div class="card-item1">
+          <router-link to="" class="card-question">常见问题</router-link>
+          <router-link to="" class="card-t">></router-link>
+
+        </div>
+        <router-link to="" class="card-item2">
+          <div class=" card-sell">销售热线</div>
+          <div class="card-tel">0571-88157838</div>
+          <div class="card-b">></div>
+        </router-link>
+
+      </div>
     </div>
   </div>
 </template>
@@ -25,7 +38,6 @@ export default {
 .card{
   height:100%;
   background:#e7ebed;
-  position:relative;
 }
 .header{
   width:100%;
@@ -76,6 +88,7 @@ export default {
       border:0;
       font-weight: 600;
       color:#fff;
+      text-align:center;
       background-image: linear-gradient(45deg,#ff798b,#fa445b);
     }
   }
@@ -158,9 +171,6 @@ export default {
   width:100%;
   height:40px;
   margin:15px 0;
-  position:absolute;
-  left:0;
-  bottom:0;
   
   .company{
     margin: 0 auto;

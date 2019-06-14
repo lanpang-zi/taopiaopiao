@@ -75,6 +75,21 @@ var router =new Router({
     {
       path:'/card',
       component:Card,
+      children:[
+        {
+          path:'bankCard',
+          component: () => import('../views/Card/bankCard.vue')
+        },
+        {
+          path:'bank',
+          component: () => import('../views/Card/bank.vue')
+        },
+        {
+          path:'',
+          redirect:'/card/bankCard'
+        }
+
+      ],
       meta: {
         requrireLogin:true
       }

@@ -1,6 +1,7 @@
 module.exports={
-devServer:{
-  proxy:'https://g.alicdn.com'
+    publicPath:'/taopiaopiao',
+    devServer:{
+    proxy:'https://g.alicdn.com'
 
    }
 }
