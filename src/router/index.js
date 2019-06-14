@@ -43,10 +43,13 @@ export default new Router({
     {
       path:'/login',
       component:Login
+    },
+    {
+      path: '/detail/:filmId',
+      name: 'detail',
+      component: () => import('../views/Detail/index.vue')
     }
    
 
   ]
 })
-
-
