@@ -10,7 +10,7 @@
       </div>
       <div class="card-list">
         <div class="card-item1">
-          <router-link to="" class="card-question">常见问题</router-link>
+          <router-link to="/question" class="card-question">常见问题</router-link>
           <router-link to="" class="card-t">></router-link>
 
         </div>

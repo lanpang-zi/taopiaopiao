@@ -107,7 +107,15 @@ var router =new Router({
       meta:{
         requireLogin:true
       }
-    }
+    },
+    {
+      path:'/question',
+      component:() => import('../views/Card/question.vue'),
+      meta:{
+        requireLogin:true
+      }
+    },
+
 
    
 

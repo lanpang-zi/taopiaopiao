@@ -80,7 +80,7 @@ export default {
           
       // }
 
-      axios.get('http://localhost:3000/user',{
+      axios.get('http://47.103.22.222:3000/user',{
         params:{
           username:`${obj.username}`,
           password:`${obj.password}`
